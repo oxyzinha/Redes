@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipologias de Rede e Ligação</title>
+    <style>
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #021020; /* Navy Blue */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+section {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
+}
+
+a {
+    color: #001f3f; /* Navy Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2ecc71; /* Dark Green */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #001f3f; /* Navy Blue */
+    border-radius: 10px;
+    color: white;
+}
+
+button {
+    background-color: #3498db; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Slightly Darker Blue */
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #ecf0f1; /* Light Grayish Blue */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.network-image {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.network-image:hover {
+    transform: scale(1.1);
+}
+
+.network-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    max-width: 600px;
+    color: #333;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #041e38; /* Navy Blue */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+section {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
+}
+
+a {
+    color: #001f3f; /* Navy Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2ecc71; /* Dark Green */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #001f3f; /* Navy Blue */
+    border-radius: 10px;
+    color: white;
+}
+
+button {
+    background-color: #09381b; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Slightly Darker Blue */
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #ecf0f1; /* Light Grayish Blue */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.network-image {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.network-image:hover {
+    transform: scale(1.1);
+}
+
+.network-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    max-width: 600px;
+    color: #333;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Network and Connection Typologies</h1>
+    </header>
+
+    <section>
+        <h2>Network Typologies</h2>
+        <ul>
+            <h3>Bus Network</h3>
+            <li>
+                <img src="Barramento.png" alt="Rede em Barramento" class="network-image"
+                    onclick="toggleContent('barramento')">
+                <div id="barramentoContent" class="content network-info">
+                    <p><strong>Description of the Bus Network:</strong>
+                        The bus network topology is described by a single cable or transmission medium that
+                        all interconnected network devices. Each device connected to the bus can access
+                        or transmit data to all other devices, making it a communication approach
+                        simple. However, the disadvantage is that if two devices try to transmit data
+                        simultaneously, a data investigation may occur, resulting in the need for
+                        collision management.
+                    </p>
+
+                </div>
+            </li>
+            <h3>
+                Ring Network</h3>
+            <li>
+                <img src="ring.png" alt="Rede em Anel" class="network-image" onclick="toggleContent('anel')">
+                <div id="anelContent" class="content network-info">
+                    <p><strong>Description of Ring Network:</strong>
+                        In ring network topology, devices are
+                        organized in a circular format, where each device is connected to its two immediate neighbors.
+                        You
+                        Data is transmitted unidirectionally along the ring, passing through each device until
+                        reach the desired destination. This format creates efficient communication and avoids data
+                        collisions.
+                        data, since each device receives data only when it is its turn.</p>
+                </div>
+            </li>
+            <h3> Star Network
+            </h3>
+            <li>
+                <img src="Star.png" alt="Rede em Estrela" class="network-image" onclick="toggleContent('estrela')">
+                <div id="estrelaContent" class="content network-info">
+                    <p><strong>Description of Star Network:</strong>
+                        In star point topology, all network devices are
+                        centrally connected to a hub. Each device has its own direct connection to the hub, and
+                        communications between devices occur through this central point. The hub acts as a
+                        traffic concentrator, facilitating the organization and efficient management of the network.</p>
+
+                </div>
+            </li>
+            <h3> Mesh Network</h3>
+            <li>
+                <img src="Malha.png" alt="Rede em Malha" class="network-image" onclick="toggleContent('Malha')">
+                <div id="MalhaContent" class="content network-info">
+                    <p><strong>Description of Mesh Network:</strong>
+                        In mesh network topology, every device is connected to every other device,
+                        creating a network where each node has a direct link to any other node. This approach
+                        provides high redundancy and reliability, because if a communication path fails, it still
+                        there are multiple alternative paths available.</p>
+
+                </div>
+            </li>
+            <h3>Tree Network</h3>
+            <li>
+                <img src="Arvore.png" alt="Rede em arvore" class="network-image" onclick="toggleContent('Arvore')">
+                <div id="ArvoreContent" class="content network-info">
+                    <p><strong>Description of Tree Network</strong>
+                        In tree topology, a root node serves as the initial central point, connecting to multiple
+                        devices at a higher level. Each of these devices, in turn, can have connections to devices at
+                        lower levels, forming additional branches. This organization creates a tree hierarchy,
+                        facilitating management and control of the network.</p>
+
+                </div>
+            </li>
+        </ul>
+
+        <h3>Hybrid Network</h3>
+        <img src="hibrida.png" alt="Rede em hibrida" class="network-image" onclick="toggleContent('Hibrida')">
+        <div id="HibridaContent" class="content network-info">
+            <p><strong>Description of Hybrid Network</strong>
+                In hybrid network topology, different parts of the network can be configured with different
+                topologies, interconnected to form a single infrastructure. This combination allows the network to
+                meet specific performance, scalability, redundancy or security requirements in different areas.</p>
+
+        </div>
+        </ul>
+    </section>
+
+    <button onclick="toggleContent('lan')">LAN</button>
+    <div id="lanContent" class="content">
+        <p><strong>Definition:</strong> A LAN is a network that is limited to a small geographic area, such as a single
+            building or a campus. It is used for connecting computers and devices within a short distance.</p>
+        <p><strong>Typical Use Cases:</strong> LANs are commonly used in homes, offices, schools, and other small-scale
+            environments to facilitate local communication and resource sharing.</p>
+    </div>
+
+    <button onclick="toggleContent('man')">MAN</button>
+    <div id="manContent" class="content">
+        <p><strong>Definition:</strong> A MAN is a network that covers a larger geographical area than a LAN but is
+            smaller than a WAN. It typically spans a city or a large campus.</p>
+        <p><strong>Typical Use Cases:</strong> MANs are employed to connect multiple LANs within a metropolitan area.
+            They provide high-speed connectivity for businesses, organizations, or educational institutions with
+            multiple locations in a city.</p>
+    </div>
+
+    <button onclick="toggleContent('wan')">WAN</button>
+    <div id="wanContent" class="content">
+        <p><strong>Definition:</strong>A WAN is a network that covers a broad area, often spanning across cities,
+            countries, or even continents. It connects LANs and MANs over long distances.</p>
+        <p><strong>Typical Use Cases:</strong> WANs are used for global communication and connectivity. Examples include
+            the internet, which is a massive WAN connecting devices worldwide.</p>
+    </div>
+
+    <button onclick="toggleContent('wlan')">WLAN</button>
+    <div id="wlanContent" class="content">
+        <p><strong>Definition:</strong>A WLAN is a type of LAN that uses wireless communication to connect devices
+            instead of physical cables. It allows for greater flexibility in device mobility.</p>
+        <p><strong>Typical Use Cases:</strong> Commonly found in homes, offices, and public spaces, WLANs enable users
+            to connect to the network without the need for physical cables, using technologies like Wi-Fi.</p>
+    </div>
+
+    <button onclick="toggleContent('wman')">WMAN</button>
+    <div id="wmanContent" class="content">
+        <p><strong>Definition:</strong> Similar to WLAN but on a larger scale, a WMAN uses wireless technology to cover
+            a metropolitan area.</p>
+        <p><strong>Typical Use Cases:</strong> WMANs are used to provide wireless connectivity over a city, allowing for
+            mobility and convenience in larger urban areas.</p>
+    </div>
+
+    <button onclick="toggleContent('san')">SAN</button>
+    <div id="sanContent" class="content">
+        <p><strong>Definition:</strong> A SAN is a specialized network designed to provide high-speed access to storage
+            resources, allowing servers to access and manage data storage.</p>
+        <p><strong>Typical Use Cases:</strong> SANs are commonly used in data centers and enterprise environments to
+            centralize storage and improve data management, backup, and retrieval processes.</p>
+    </div>
+
+    <button onclick="toggleContent('pan')">PAN</button>
+    <div id="panContent" class="content">
+        <p><strong>Definition:</strong>A PAN is a network for personal devices within an individual's workspace,
+            typically within a range of a few meters</p>
+        <p><strong>Typical Use Cases:</strong> PAN-type networks, or Personal Area Networks, are used for devices to
+            communicate within a very limited distance. An example is Bluetooth and UWB networks.</p>
+    </div>
+
+    <script>
+        function toggleContent(type) {
+            var content = document.getElementById(type + 'Content');
+            content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+        } type = "text/javascript" >
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+    </script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </script>
+
+
+    <footer>
+        <p>&copy; 2024 Seu Nome</p>
+    </footer>
+
+</body>
+
+</html>
